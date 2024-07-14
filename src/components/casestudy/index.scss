@@ -1,0 +1,112 @@
+.casestudy {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 80px;
+  gap: 20px;
+
+  &__subheading {
+    width: 1000px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: #00000066;
+  }
+
+  &__cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 60px;
+  }
+}
+
+.casecard {
+  width: 475px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 30px;
+  cursor: pointer;
+
+  &__company {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+
+    &__img {
+      height: 60px;
+      width: fit-content;
+    }
+
+    &__btn {
+      padding: 12px 18px;
+      width: fit-content;
+      border-radius: 50px;
+      font-size: 17.49px;
+      font-weight: 700;
+      line-height: 22.04px;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 4px 4px 0px 0px black;
+        transition: 200ms ease-in-out;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__percentage {
+      font-size: 99.7px;
+      font-weight: 600;
+      line-height: 119.64px;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 27.54px;
+      font-weight: 400;
+      line-height: 44.06px;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.casecard.active {
+  height: 530px;
+  width: 500px;
+  background-color: var(--primary-color);
+  box-shadow: 10px 10px 0px 0px black;
+  transition: 200ms ease-in-out;
+}
+
+.casecard__company.active {
+  justify-content: space-between;
+  transition: 500ms ease-in-out;
+}

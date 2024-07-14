@@ -1,0 +1,38 @@
+.partners {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  white-space: nowrap;
+  height: 400px;
+
+  &__companies {
+    display: inline-block; // Inline block to allow horizontal scrolling
+    width: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0px;
+    white-space: nowrap;
+    animation-name: scroll-right-to-left;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow-x: hidden;
+
+    &__img {
+      height: 40px;
+      width: fit-content;
+    }
+  }
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
