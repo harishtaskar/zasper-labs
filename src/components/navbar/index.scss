@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 60px;
+  background-color: #ffffff;
+
+  &__logo {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45.36px;
+    text-align: left;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: 24px;
+
+    &__link {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 27.72px;
+      text-align: left;
+      color: #00000099;
+
+      &:hover {
+        color: #000000;
+        font-weight: 400;
+      }
+    }
+  }
+}
