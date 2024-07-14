@@ -9,7 +9,7 @@ $button-border-radius: 80px;
 $button-transition-duration: 0.3s;
 
 .primary-button {
-  display: inline-block;
+  display: flex;
   padding: $button-padding;
   font-size: $button-font-size;
   color: $button-border-color;
@@ -23,7 +23,6 @@ $button-transition-duration: 0.3s;
   position: relative;
   transition: all $button-transition-duration ease-in-out;
   cursor: pointer;
-  z-index: 1;
   background-color: #ffffff;
 
   &:hover {
@@ -65,35 +64,10 @@ $button-transition-duration: 0.3s;
   position: relative;
   transition: all $button-transition-duration ease-in-out;
   cursor: pointer;
-  z-index: 1;
   background-color: #ffffff;
   align-items: center;
   justify-content: center;
   gap: 20px;
-
-  &:hover {
-    background-color: $button-shadow-color;
-    transition: all $button-transition-duration ease-in-out;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    width: 100%;
-    height: 100%;
-    border: 2px solid $button-border-color;
-    border-radius: $button-border-radius;
-    transition: all $button-transition-duration ease-in-out;
-    z-index: -1;
-    transform: scale(1);
-    background-color: $button-shadow-color;
-  }
-
-  &:hover::after {
-    display: none;
-  }
 
   &__text {
     font-size: 18px;
@@ -123,4 +97,28 @@ $button-transition-duration: 0.3s;
   width: 100%;
   justify-content: space-between;
   transition: 200ms ease-in-out;
+
+  &:hover {
+    background-color: $button-shadow-color;
+    transition: all $button-transition-duration ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: $button-border-radius;
+    transition: all $button-transition-duration ease-in-out;
+    z-index: -1;
+    transform: scale(1);
+    background-color: $button-shadow-color;
+  }
+
+  &:hover::after {
+    display: none;
+  }
 }
