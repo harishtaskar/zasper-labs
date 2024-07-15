@@ -9,6 +9,8 @@ type Props = {
   percentage: string;
   title: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
+  onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
 };
 
 const CaseStudyCard = ({
@@ -17,9 +19,16 @@ const CaseStudyCard = ({
   percentage,
   title,
   onClick,
+  onMouseEnter,
+  onMouseLeave,
 }: Props) => {
   return (
-    <div className={`casecard ${isActive ? "active" : ""}`} onClick={onClick}>
+    <div
+      className={`casecard ${isActive ? "active" : ""}`}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <div className={`casecard__company ${isActive ? "active" : ""}`}>
         <Image
           src={company}
